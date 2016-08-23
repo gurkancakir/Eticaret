@@ -3,6 +3,13 @@
 
 # --- !Ups
 
+create table category (
+  id                            integer auto_increment not null,
+  name                          varchar(255),
+  parent_id                     varchar(255),
+  constraint pk_category primary key (id)
+);
+
 create table person (
   id                            integer auto_increment not null,
   name                          varchar(255),
@@ -21,6 +28,8 @@ create table product (
 
 
 # --- !Downs
+
+drop table if exists category;
 
 drop table if exists person;
 

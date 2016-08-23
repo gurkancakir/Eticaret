@@ -21,17 +21,17 @@ import play.data._
 import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 
-class home extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[String,Html,play.twirl.api.HtmlFormat.Appendable] {
+class home extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template3[String,List[Category],Html,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(messages:String)(content:Html):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(messages:String)(categories:List[Category])(content:Html):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.33*/("""
+Seq[Any](format.raw/*1.60*/("""
 
-"""),_display_(/*3.2*/main("Test")/*3.14*/{_display_(Seq[Any](format.raw/*3.15*/("""
+"""),_display_(/*3.2*/main(messages)/*3.16*/{_display_(Seq[Any](format.raw/*3.17*/("""
 
     """),format.raw/*5.5*/("""<section id="slider"><!--slider-->
         <div class="container">
@@ -105,111 +105,34 @@ Seq[Any](format.raw/*1.33*/("""
                     <div class="left-sidebar">
                         <h2>Category</h2>
                         <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Sportswear
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="sportswear" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Nike </a></li>
-                                            <li><a href="#">Under Armour </a></li>
-                                            <li><a href="#">Adidas </a></li>
-                                            <li><a href="#">Puma</a></li>
-                                            <li><a href="#">ASICS </a></li>
-                                        </ul>
+                            """),_display_(/*77.30*/for(category <- categories) yield /*77.57*/ {_display_(Seq[Any](format.raw/*77.59*/("""
+                                """),_display_(/*78.34*/if(category.getParentId() == null)/*78.68*/{_display_(Seq[Any](format.raw/*78.69*/("""
+                                    """),format.raw/*79.37*/("""<div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordian" href="#"""),_display_(/*82.108*/category/*82.116*/.getName()),format.raw/*82.126*/("""">
+                                                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                                    """),_display_(/*84.54*/category/*84.62*/.getName()),format.raw/*84.72*/("""
+                                                """),format.raw/*85.49*/("""</a>
+                                            </h4>
+                                        </div>
+                                        <div id=""""),_display_(/*88.51*/category/*88.59*/.getName()),format.raw/*88.69*/("""" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <ul>
+                                                    """),_display_(/*91.54*/for(categoryalt <- categories) yield /*91.84*/ {_display_(Seq[Any](format.raw/*91.86*/("""
+                                                        """),_display_(/*92.58*/if(category.getId() == categoryalt.getParentId())/*92.107*/{_display_(Seq[Any](format.raw/*92.108*/("""
+                                                            """),format.raw/*93.61*/("""<li><a href="#">"""),_display_(/*93.78*/categoryalt/*93.89*/.getName()),format.raw/*93.99*/("""</a></li>
+                                                        """)))}),format.raw/*94.58*/("""
+                                                    """)))}),format.raw/*95.54*/("""
+                                                """),format.raw/*96.49*/("""</ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#mens">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Mens
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="mens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Fendi</a></li>
-                                            <li><a href="#">Guess</a></li>
-                                            <li><a href="#">Valentino</a></li>
-                                            <li><a href="#">Dior</a></li>
-                                            <li><a href="#">Versace</a></li>
-                                            <li><a href="#">Armani</a></li>
-                                            <li><a href="#">Prada</a></li>
-                                            <li><a href="#">Dolce and Gabbana</a></li>
-                                            <li><a href="#">Chanel</a></li>
-                                            <li><a href="#">Gucci</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                                """)))}),format.raw/*100.34*/("""
 
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#womens">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Womens
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="womens" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Fendi</a></li>
-                                            <li><a href="#">Guess</a></li>
-                                            <li><a href="#">Valentino</a></li>
-                                            <li><a href="#">Dior</a></li>
-                                            <li><a href="#">Versace</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Kids</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Fashion</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Households</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Interiors</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Clothing</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Bags</a></h4>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">Shoes</a></h4>
-                                </div>
-                            </div>
-                        </div><!--/category-products-->
+                              """),format.raw/*178.41*/("""
+                            """)))}),format.raw/*179.30*/("""
+                        """),format.raw/*180.25*/("""</div><!--/category-products-->
 
                         <div class="brands_products"><!--brands_products-->
                             <h2>Brands</h2>
@@ -240,8 +163,8 @@ Seq[Any](format.raw/*1.33*/("""
 
                     </div>
                 </div>
-                """),_display_(/*212.18*/content),format.raw/*212.25*/("""
-            """),format.raw/*213.13*/("""</div>
+                """),_display_(/*211.18*/content),format.raw/*211.25*/("""
+            """),format.raw/*212.13*/("""</div>
         </div>
     </section>
 
@@ -250,9 +173,9 @@ Seq[Any](format.raw/*1.33*/("""
     }
   }
 
-  def render(messages:String,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(messages)(content)
+  def render(messages:String,categories:List[Category],content:Html): play.twirl.api.HtmlFormat.Appendable = apply(messages)(categories)(content)
 
-  def f:((String) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (messages) => (content) => apply(messages)(content)
+  def f:((String) => (List[Category]) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (messages) => (categories) => (content) => apply(messages)(categories)(content)
 
   def ref: this.type = this
 
@@ -265,11 +188,11 @@ Seq[Any](format.raw/*1.33*/("""
 object home extends home_Scope0.home
               /*
                   -- GENERATED --
-                  DATE: Tue Aug 23 20:18:04 EEST 2016
+                  DATE: Wed Aug 24 00:16:57 EEST 2016
                   SOURCE: /home/gurkan/workspace/Eticaret/app/views/home.scala.html
-                  HASH: 89bc3c6b262e393e5c214820a132f67461a93856
-                  MATRIX: 748->1|874->32|902->35|922->47|960->48|992->54|14001->13035|14030->13042|14072->13055
-                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|243->212|243->212|244->213
+                  HASH: 830587c0b3090fa0ef7816244eb3bd541c4ac4f8
+                  MATRIX: 763->1|916->59|944->62|966->76|1004->77|1036->83|5305->4325|5348->4352|5388->4354|5449->4388|5492->4422|5531->4423|5596->4460|5902->4738|5920->4746|5952->4756|6152->4929|6169->4937|6200->4947|6277->4996|6456->5148|6473->5156|6504->5166|6741->5376|6787->5406|6827->5408|6912->5466|6971->5515|7011->5516|7100->5577|7144->5594|7164->5605|7195->5615|7293->5682|7378->5736|7455->5785|7667->5965|7728->10986|7790->11016|7844->11041|10301->13470|10330->13477|10372->13490
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|108->77|108->77|108->77|109->78|109->78|109->78|110->79|113->82|113->82|113->82|115->84|115->84|115->84|116->85|119->88|119->88|119->88|122->91|122->91|122->91|123->92|123->92|123->92|124->93|124->93|124->93|124->93|125->94|126->95|127->96|131->100|133->178|134->179|135->180|166->211|166->211|167->212
                   -- GENERATED --
               */
           

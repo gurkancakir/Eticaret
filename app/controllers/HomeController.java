@@ -1,8 +1,7 @@
 package controllers;
 
 import com.avaje.ebean.Model;
-import models.Person;
-import models.Product;
+import models.*;
 import play.data.Form;
 import play.mvc.*;
 
@@ -16,7 +15,9 @@ public class HomeController extends Controller {
 
 
     public Result index() {
-        return ok(index.render());
+        List<Product> products = new Model.Finder(String.class,Product.class).all();
+        List<Category> categories = new Model.Finder(String.class,Category.class).all();
+        return ok(index.render(products,categories));
     }
 
     public Result login(){
@@ -24,7 +25,8 @@ public class HomeController extends Controller {
     }
 
     public Result productDetail(){
-        return ok(productdetail.render());
+        List<Category> categories = new Model.Finder(String.class,Category.class).all();
+        return ok(productdetail.render(categories));
     }
 
     public Result addPerson(){
@@ -33,8 +35,4 @@ public class HomeController extends Controller {
         return redirect(routes.HomeController.login());
     }
 
-    public Result getProducts(){
-        List<Product> products = new Model.Finder(String.class,Product.class).all();
-        return ok(toJson(products));
-    }
 }

@@ -54,9 +54,10 @@ Seq[Any](format.raw/*7.32*/("""
         <link rel="stylesheet" media="screen" href="/assets/stylesheets/main.css">
         <link rel="stylesheet" media="screen" href="/assets/stylesheets/responsive.css">
 
+
             <!--[if lt IE 9]>
-                <script src="/assets/javascripts/html5shiv.js" type="text/javascript" />
-                <script src="/assets/javascripts/respond.min.js" type="text/javascript" />
+                <script src=""""),_display_(/*29.31*/routes/*29.37*/.Assets.versioned("javascripts/html5shiv.js")),format.raw/*29.82*/("""" type="text/javascript" ></script>
+                <script src=""""),_display_(/*30.31*/routes/*30.37*/.Assets.versioned("javascripts/respond.min.js")),format.raw/*30.84*/("""" type="text/javascript" ></script>
             <![endif]-->
 
         <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
@@ -94,7 +95,7 @@ Seq[Any](format.raw/*7.32*/("""
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="logo pull-left">
-                                <a href=""""),_display_(/*67.43*/routes/*67.49*/.HomeController.index()),format.raw/*67.72*/(""""><img src="/assets/images/home/logo.png" alt="" /></a>
+                                <a href=""""),_display_(/*68.43*/routes/*68.49*/.HomeController.index()),format.raw/*68.72*/(""""><img src="/assets/images/home/logo.png" alt="" /></a>
                             </div>
                             <div class="btn-group pull-right">
                                 <div class="btn-group">
@@ -127,7 +128,7 @@ Seq[Any](format.raw/*7.32*/("""
                                     <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                                     <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                    <li><a href=""""),_display_(/*100.51*/routes/*100.57*/.HomeController.login()),format.raw/*100.80*/(""""><i class="fa fa-lock"></i> Login</a></li>
+                                    <li><a href=""""),_display_(/*101.51*/routes/*101.57*/.HomeController.login()),format.raw/*101.80*/(""""><i class="fa fa-lock"></i> Login</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -156,7 +157,7 @@ Seq[Any](format.raw/*7.32*/("""
                                             <li><a href="product-details.html">Product Details</a></li>
                                             <li><a href="checkout.html">Checkout</a></li>
                                             <li><a href="cart.html">Cart</a></li>
-                                            <li><a href=""""),_display_(/*129.59*/routes/*129.65*/.HomeController.login()),format.raw/*129.88*/("""">Login</a></li>
+                                            <li><a href=""""),_display_(/*130.59*/routes/*130.65*/.HomeController.login()),format.raw/*130.88*/("""">Login</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
@@ -181,10 +182,10 @@ Seq[Any](format.raw/*7.32*/("""
         </header><!--/header-->
 
 
-        """),format.raw/*155.32*/("""
-        """),_display_(/*156.10*/content),format.raw/*156.17*/("""
+        """),format.raw/*156.32*/("""
+        """),_display_(/*157.10*/content),format.raw/*157.17*/("""
 
-        """),format.raw/*158.9*/("""<br />
+        """),format.raw/*159.9*/("""<br />
         <footer id="footer"><!--Footer-->
             <div class="footer-top">
                 <div class="container">
@@ -343,12 +344,13 @@ Seq[Any](format.raw/*7.32*/("""
 
         </footer><!--/Footer-->
 
-        <script src="/assets/javascripts/jquery.js" type="text/javascript" />
-        <script src="/assets/javascripts/bootstrap.min.js" type="text/javascript" />
-        <script src="/assets/javascripts/jquery.scrollUp.min.js" type="text/javascript" />
-        <script src="/assets/javascripts/price-range.js" type="text/javascript" />
-        <script src="/assets/javascripts/jquery.prettyPhoto.js" type="text/javascript" />
-        <script src="/assets/javascripts/main.js" type="text/javascript" />
+        <script src=""""),_display_(/*318.23*/routes/*318.29*/.Assets.versioned("javascripts/jquery.js")),format.raw/*318.71*/("""" type="text/javascript"></script>
+        <script src=""""),_display_(/*319.23*/routes/*319.29*/.Assets.versioned("javascripts/bootstrap.min.js")),format.raw/*319.78*/("""" type="text/javascript" ></script>
+        <script src=""""),_display_(/*320.23*/routes/*320.29*/.Assets.versioned("javascripts/jquery.scrollUp.min.js")),format.raw/*320.84*/("""" type="text/javascript"></script>
+        <script src=""""),_display_(/*321.23*/routes/*321.29*/.Assets.versioned("javascripts/price-range.js")),format.raw/*321.76*/("""" type="text/javascript" ></script>
+        <script src=""""),_display_(/*322.23*/routes/*322.29*/.Assets.versioned("javascripts/jquery.prettyPhoto.js")),format.raw/*322.83*/("""" type="text/javascript" ></script>
+        <script src=""""),_display_(/*323.23*/routes/*323.29*/.Assets.versioned("javascripts/main.js")),format.raw/*323.69*/("""" type="text/javascript" ></script>
+
     </body>
 </html>
 """))
@@ -376,11 +378,11 @@ Seq[Any](format.raw/*7.32*/("""
 object main extends main_Scope0.main
               /*
                   -- GENERATED --
-                  DATE: Tue Aug 23 21:07:07 EEST 2016
+                  DATE: Tue Aug 23 23:27:19 EEST 2016
                   SOURCE: /home/gurkan/workspace/Eticaret/app/views/main.scala.html
-                  HASH: f4a6d40c95500cf6ea364dc4e6c66c4c0fdba30f
-                  MATRIX: 1002->260|1127->290|1155->292|1235->397|1271->406|1306->414|1332->419|4318->3379|4333->3385|4377->3408|6527->5530|6543->5536|6588->5559|8428->7371|8444->7377|8489->7400|9720->8692|9758->8702|9787->8709|9825->8719
-                  LINES: 32->7|37->7|39->9|42->12|43->13|43->13|43->13|97->67|97->67|97->67|130->100|130->100|130->100|159->129|159->129|159->129|184->155|185->156|185->156|187->158
+                  HASH: d0e1274e2e8e3c8e57863437c21398fd977cc506
+                  MATRIX: 1002->260|1127->290|1155->292|1235->397|1271->406|1306->414|1332->419|2272->1332|2287->1338|2353->1383|2446->1449|2461->1455|2529->1502|4489->3436|4504->3442|4548->3465|6698->5587|6714->5593|6759->5616|8599->7428|8615->7434|8660->7457|9891->8749|9929->8759|9958->8766|9996->8776|18389->17141|18405->17147|18469->17189|18554->17246|18570->17252|18641->17301|18727->17359|18743->17365|18820->17420|18905->17477|18921->17483|18990->17530|19076->17588|19092->17594|19168->17648|19254->17706|19270->17712|19332->17752
+                  LINES: 32->7|37->7|39->9|42->12|43->13|43->13|43->13|59->29|59->29|59->29|60->30|60->30|60->30|98->68|98->68|98->68|131->101|131->101|131->101|160->130|160->130|160->130|185->156|186->157|186->157|188->159|347->318|347->318|347->318|348->319|348->319|348->319|349->320|349->320|349->320|350->321|350->321|350->321|351->322|351->322|351->322|352->323|352->323|352->323
                   -- GENERATED --
               */
           

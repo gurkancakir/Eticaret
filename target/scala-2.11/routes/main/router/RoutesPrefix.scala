@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/gurkan/workspace/Eticaret/conf/routes
-// @DATE:Tue Aug 23 21:28:01 EEST 2016
+// @DATE:Wed Aug 24 00:05:21 EEST 2016
 
 
 package router {

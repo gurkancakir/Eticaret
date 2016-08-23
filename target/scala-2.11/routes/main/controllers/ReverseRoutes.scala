@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/gurkan/workspace/Eticaret/conf/routes
-// @DATE:Tue Aug 23 21:28:01 EEST 2016
+// @DATE:Wed Aug 24 00:05:21 EEST 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -20,16 +20,10 @@ package controllers {
     }
 
   
-    // @LINE:14
-    def getProducts(): Call = {
+    // @LINE:12
+    def productDetail(): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "products")
-    }
-  
-    // @LINE:13
-    def addPerson(): Call = {
-      import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "person")
+      Call("GET", _prefix + { _defaultPrefix } + "product-detail")
     }
   
     // @LINE:6
@@ -38,10 +32,10 @@ package controllers {
       Call("GET", _prefix)
     }
   
-    // @LINE:12
-    def productDetail(): Call = {
+    // @LINE:13
+    def addPerson(): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "product-detail")
+      Call("POST", _prefix + { _defaultPrefix } + "person")
     }
   
     // @LINE:11

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/gurkan/workspace/Eticaret/conf/routes
-// @DATE:Tue Aug 23 21:28:01 EEST 2016
+// @DATE:Wed Aug 24 00:05:21 EEST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -23,22 +23,12 @@ package controllers.javascript {
     }
 
   
-    // @LINE:14
-    def getProducts: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.getProducts",
+    // @LINE:12
+    def productDetail: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.productDetail",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "products"})
-        }
-      """
-    )
-  
-    // @LINE:13
-    def addPerson: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.addPerson",
-      """
-        function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "person"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "product-detail"})
         }
       """
     )
@@ -53,12 +43,12 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:12
-    def productDetail: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.productDetail",
+    // @LINE:13
+    def addPerson: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addPerson",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "product-detail"})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "person"})
         }
       """
     )

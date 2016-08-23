@@ -11,4 +11,3 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 GET     /login                      controllers.HomeController.login()
 GET     /product-detail             controllers.HomeController.productDetail()
 POST    /person                     controllers.HomeController.addPerson()
-GET     /products                   controllers.HomeController.getProducts()

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/gurkan/workspace/Eticaret/conf/routes
-// @DATE:Tue Aug 23 21:28:01 EEST 2016
+// @DATE:Wed Aug 24 00:05:21 EEST 2016
 
 package router
 
@@ -48,7 +48,6 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.HomeController.login()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """product-detail""", """controllers.HomeController.productDetail()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """person""", """controllers.HomeController.addPerson()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """products""", """controllers.HomeController.getProducts()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -141,23 +140,6 @@ class Routes(
     )
   )
 
-  // @LINE:14
-  private[this] lazy val controllers_HomeController_getProducts5_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("products")))
-  )
-  private[this] lazy val controllers_HomeController_getProducts5_invoker = createInvoker(
-    HomeController_0.getProducts(),
-    HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.HomeController",
-      "getProducts",
-      Nil,
-      "GET",
-      """""",
-      this.prefix + """products"""
-    )
-  )
-
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -189,12 +171,6 @@ class Routes(
     case controllers_HomeController_addPerson4_route(params) =>
       call { 
         controllers_HomeController_addPerson4_invoker.call(HomeController_0.addPerson())
-      }
-  
-    // @LINE:14
-    case controllers_HomeController_getProducts5_route(params) =>
-      call { 
-        controllers_HomeController_getProducts5_invoker.call(HomeController_0.getProducts())
       }
   }
 }
