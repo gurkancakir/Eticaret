@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/gurkan/workspace/Eticaret/conf/routes
-// @DATE:Wed Aug 24 00:05:21 EEST 2016
+// @DATE:Wed Aug 24 22:28:25 EEST 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -20,10 +20,22 @@ package controllers {
     }
 
   
-    // @LINE:12
-    def productDetail(): Call = {
+    // @LINE:16
+    def getCategoriesByParentId(id:String): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "product-detail")
+      Call("GET", _prefix + { _defaultPrefix } + "categories/" + implicitly[PathBindable[String]].unbind("id", id))
+    }
+  
+    // @LINE:14
+    def getCategories(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "categories")
+    }
+  
+    // @LINE:13
+    def addPerson(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "person")
     }
   
     // @LINE:6
@@ -32,10 +44,16 @@ package controllers {
       Call("GET", _prefix)
     }
   
-    // @LINE:13
-    def addPerson(): Call = {
+    // @LINE:15
+    def contact(): Call = {
       import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "person")
+      Call("GET", _prefix + { _defaultPrefix } + "contact")
+    }
+  
+    // @LINE:12
+    def productDetail(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "product-detail")
     }
   
     // @LINE:11

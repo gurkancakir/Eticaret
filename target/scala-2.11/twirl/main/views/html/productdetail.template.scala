@@ -21,16 +21,16 @@ import play.data._
 import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 
-class productdetail extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[List[Category],play.twirl.api.HtmlFormat.Appendable] {
+class productdetail extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(categories:List[Category]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/():play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.29*/("""
-"""),_display_(/*2.2*/home("")/*2.10*/(categories)/*2.22*/{_display_(Seq[Any](format.raw/*2.23*/("""
+Seq[Any](format.raw/*1.4*/("""
+"""),_display_(/*2.2*/home("")/*2.10*/{_display_(Seq[Any](format.raw/*2.11*/("""
     """),format.raw/*3.5*/("""<div class="col-sm-9 padding-right">
         <div class="product-details"><!--product-details-->
             <div class="col-sm-5">
@@ -380,9 +380,9 @@ Seq[Any](format.raw/*1.29*/("""
     }
   }
 
-  def render(categories:List[Category]): play.twirl.api.HtmlFormat.Appendable = apply(categories)
+  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
 
-  def f:((List[Category]) => play.twirl.api.HtmlFormat.Appendable) = (categories) => apply(categories)
+  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
 
   def ref: this.type = this
 
@@ -395,11 +395,11 @@ Seq[Any](format.raw/*1.29*/("""
 object productdetail extends productdetail_Scope0.productdetail
               /*
                   -- GENERATED --
-                  DATE: Wed Aug 24 00:07:52 EEST 2016
-                  SOURCE: /home/gurkan/workspace/Eticaret/app/views/productdetail.scala.html
-                  HASH: e01cc6ea9643451a787f299277912c13647148a8
-                  MATRIX: 769->1|891->28|918->30|934->38|954->50|992->51|1023->56
-                  LINES: 27->1|32->1|33->2|33->2|33->2|33->2|34->3
+                  DATE: Wed Aug 24 21:00:41 EEST 2016
+                  SOURCE: /home/gurkan/workspace/Eticaret/app/views/productDetail.scala.html
+                  HASH: 1d57e5de8f4df762e6c25b30ba361c00ff16a904
+                  MATRIX: 754->1|850->3|877->5|893->13|931->14|962->19
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3
                   -- GENERATED --
               */
           

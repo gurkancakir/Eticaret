@@ -21,17 +21,17 @@ import play.data._
 import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 
-class index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[List[Product],List[Category],play.twirl.api.HtmlFormat.Appendable] {
+class index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[List[Product],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(products: List[Product])(categories:List[Category]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(products: List[Product]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.54*/("""
+Seq[Any](format.raw/*1.27*/("""
 
-"""),_display_(/*3.2*/home("Home")/*3.14*/(categories)/*3.26*/{_display_(Seq[Any](format.raw/*3.27*/("""
+"""),_display_(/*3.2*/home("Home")/*3.14*/{_display_(Seq[Any](format.raw/*3.15*/("""
     """),format.raw/*4.5*/("""<div class="col-sm-9 padding-right">
         <div class="features_items"><!--features_items-->
             <h2 class="title text-center">Features Items</h2>
@@ -460,9 +460,9 @@ format.raw("""div>
     }
   }
 
-  def render(products:List[Product],categories:List[Category]): play.twirl.api.HtmlFormat.Appendable = apply(products)(categories)
+  def render(products:List[Product]): play.twirl.api.HtmlFormat.Appendable = apply(products)
 
-  def f:((List[Product]) => (List[Category]) => play.twirl.api.HtmlFormat.Appendable) = (products) => (categories) => apply(products)(categories)
+  def f:((List[Product]) => play.twirl.api.HtmlFormat.Appendable) = (products) => apply(products)
 
   def ref: this.type = this
 
@@ -475,11 +475,11 @@ format.raw("""div>
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Wed Aug 24 00:01:46 EEST 2016
+                  DATE: Wed Aug 24 20:59:27 EEST 2016
                   SOURCE: /home/gurkan/workspace/Eticaret/app/views/index.scala.html
-                  HASH: d935729c71b078ff3a76f33defaaf83c613b37f4
-                  MATRIX: 767->1|914->53|942->56|962->68|982->80|1020->81|1051->86|1248->257|1287->281|1326->283|1366->296|1619->522|1635->529|1670->543|1741->587|1757->594|1789->605|1854->643|1870->650|1901->660|2241->973|2257->980|2289->991|2358->1033|2374->1040|2405->1050|3086->1700|3124->1711|23738->22274
-                  LINES: 27->1|32->1|34->3|34->3|34->3|34->3|35->4|39->8|39->8|39->8|40->9|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|51->20|51->20|51->20|52->21|52->21|52->21|65->34|68->37|457->425
+                  HASH: 004b1bebbed10fbce93b4a2cf9a88dd6423f73de
+                  MATRIX: 752->1|872->26|900->29|920->41|958->42|989->47|1186->218|1225->242|1264->244|1304->257|1557->483|1573->490|1608->504|1679->548|1695->555|1727->566|1792->604|1808->611|1839->621|2179->934|2195->941|2227->952|2296->994|2312->1001|2343->1011|3024->1661|3062->1672|23676->22235
+                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|39->8|39->8|39->8|40->9|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|51->20|51->20|51->20|52->21|52->21|52->21|65->34|68->37|457->425
                   -- GENERATED --
               */
           
