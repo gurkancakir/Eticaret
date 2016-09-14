@@ -5,9 +5,9 @@
         <div class="col-sm-4 col-sm-offset-1">
             <div class="login-form"><!--login form-->
                 <h2>Login to your account</h2>
-                <form action="#">
-                    <input placeholder="Name" type="text">
-                    <input placeholder="Email Address" type="email">
+                <form action="@routes.HomeController.checkLogin()" method="post">
+                    <input placeholder="Email Address" type="email" name="email">
+                    <input placeholder="Password" type="password" name="password">
                     <span>
                         <input class="checkbox" type="checkbox">
                         Keep me signed in

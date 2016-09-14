@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/gurkan/workspace/Eticaret/conf/routes
-// @DATE:Wed Aug 24 22:28:25 EEST 2016
+// @DATE:Wed Sep 14 18:21:46 EEST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:16
+    // @LINE:17
     def getCategoriesByParentId: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.getCategoriesByParentId",
       """
@@ -33,7 +33,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:14
+    // @LINE:12
+    def checkLogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.checkLogin",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+        }
+      """
+    )
+  
+    // @LINE:15
     def getCategories: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.getCategories",
       """
@@ -43,7 +53,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:13
+    // @LINE:14
     def addPerson: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addPerson",
       """
@@ -63,7 +73,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:15
+    // @LINE:16
     def contact: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.contact",
       """
@@ -73,7 +83,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:12
+    // @LINE:13
     def productDetail: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.productDetail",
       """

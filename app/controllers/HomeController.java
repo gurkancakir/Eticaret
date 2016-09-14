@@ -24,6 +24,18 @@ public class HomeController extends Controller {
         return ok(login.render());
     }
 
+    public Result checkLogin(){
+        Person person = Form.form(Person.class).bindFromRequest().get();
+        List<Person> findedPersons = new Model.Finder(String.class,Person.class).where()
+                .ilike("email",person.email)
+                .ilike("password",person.password)
+                .findList();
+        
+        if (findedPersons != null && findedPersons.size() > 0 )
+           session().put("person", findedPersons.get(0).toString());
+        return redirect(routes.HomeController.index());
+    }
+
     public Result productDetail(){
         return ok(productdetail.render());
     }

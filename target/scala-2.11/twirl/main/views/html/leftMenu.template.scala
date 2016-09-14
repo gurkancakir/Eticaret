@@ -35,9 +35,8 @@ Seq[Any](format.raw/*1.4*/("""
         <h2>Category</h2>
         <div class="panel-group category-products" id="accordian"><!--category-productsr-->
 
-            """),format.raw/*85.15*/("""
-
-        """),format.raw/*87.9*/("""</div><!--/category-products-->
+            """),format.raw/*7.48*/("""
+        """),format.raw/*8.9*/("""</div><!--/category-products-->
 
         <div class="brands_products"><!--brands_products-->
             <h2>Brands</h2>
@@ -87,11 +86,11 @@ Seq[Any](format.raw/*1.4*/("""
 object leftMenu extends leftMenu_Scope0.leftMenu
               /*
                   -- GENERATED --
-                  DATE: Wed Aug 24 22:41:48 EEST 2016
+                  DATE: Wed Aug 24 23:20:44 EEST 2016
                   SOURCE: /home/gurkan/workspace/Eticaret/app/views/leftMenu.scala.html
-                  HASH: 8527ffa87061060425783c4f762a472a01c62bf0
-                  MATRIX: 744->1|840->3|867->4|1080->3682|1117->3692
-                  LINES: 27->1|32->1|33->2|38->85|40->87
+                  HASH: 220d38a3efa34c7ec514c3228660618756369345
+                  MATRIX: 744->1|840->3|867->4|1079->224|1114->233
+                  LINES: 27->1|32->1|33->2|38->7|39->8
                   -- GENERATED --
               */
           

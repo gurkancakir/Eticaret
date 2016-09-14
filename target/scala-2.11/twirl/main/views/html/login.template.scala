@@ -34,9 +34,9 @@ Seq[Any](_display_(/*3.2*/main("Login")/*3.15*/{_display_(Seq[Any](format.raw/*3
         <div class="col-sm-4 col-sm-offset-1">
             <div class="login-form"><!--login form-->
                 <h2>Login to your account</h2>
-                <form action="#">
-                    <input placeholder="Name" type="text">
-                    <input placeholder="Email Address" type="email">
+                <form action=""""),_display_(/*8.32*/routes/*8.38*/.HomeController.checkLogin()),format.raw/*8.66*/("""" method="post">
+                    <input placeholder="Email Address" type="email" name="email">
+                    <input placeholder="Password" type="password" name="password">
                     <span>
                         <input class="checkbox" type="checkbox">
                         Keep me signed in
@@ -80,11 +80,11 @@ Seq[Any](_display_(/*3.2*/main("Login")/*3.15*/{_display_(Seq[Any](format.raw/*3
 object login extends login_Scope0.login
               /*
                   -- GENERATED --
-                  DATE: Tue Aug 23 20:36:22 EEST 2016
+                  DATE: Wed Sep 14 18:32:32 EEST 2016
                   SOURCE: /home/gurkan/workspace/Eticaret/app/views/login.scala.html
-                  HASH: c5f9b9bd225a75a4c4b0c8f9eaf3e740c6969b44
-                  MATRIX: 827->3|848->16|886->17|917->22|1833->911|1848->917|1896->944
-                  LINES: 32->3|32->3|32->3|33->4|54->25|54->25|54->25
+                  HASH: 4bedaddda9d77c4c5c4ee02eb466a65e8ecdabd3
+                  MATRIX: 827->3|848->16|886->17|917->22|1140->219|1154->225|1202->253|1972->996|1987->1002|2035->1029
+                  LINES: 32->3|32->3|32->3|33->4|37->8|37->8|37->8|54->25|54->25|54->25
                   -- GENERATED --
               */
           
